@@ -4,9 +4,9 @@
   "private": true,
   "description": "موقع متخصص لمادة الأحياء، مصمم ليكون رفيقك الأول في رحلتك الدراسية. نوفر لك كل ما تحتاجه من كتب، ملخصات، واختبارات لمساعدتك على التفوق وتبسيط المفاهيم العلمية بأسلوب شيق وجذاب.",
   "scripts": {
-    "start": "echo \"To run this project, open index.html in your web browser.\"",
-    "dev": "echo \"To run this project, open index.html in your web browser.\"",
-    "build": "mkdir dist && cp index.html *.ts *.tsx dist/ && cp -r components pages dist/",
+    "start": "echo \"To run this project, you need a local server. Or run 'npm run build' and open dist/index.html.\"",
+    "dev": "echo \"To run this project, you need a local server. Or run 'npm run build' and open dist/index.html.\"",
+    "build": "node build.js",
     "test": "echo \"No test step configured.\""
   },
   "dependencies": {
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "esbuild": "^0.20.2"
   }
 }
