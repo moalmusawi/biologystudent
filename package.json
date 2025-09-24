@@ -6,7 +6,7 @@
   "scripts": {
     "start": "echo \"To run this project, open index.html in your web browser.\"",
     "dev": "echo \"To run this project, open index.html in your web browser.\"",
-    "build": "echo \"No build step configured.\"",
+    "build": "mkdir dist && cp index.html *.ts *.tsx dist/ && cp -r components pages dist/",
     "test": "echo \"No test step configured.\""
   },
   "dependencies": {
