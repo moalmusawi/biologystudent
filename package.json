@@ -1,22 +1,22 @@
 {
-  "name": "لا-حياة-بلا-أحياء",
+  "name": "la-hayata-bila-ahyaa",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "description": "موقع متخصص لمادة الأحياء، مصمم ليكون رفيقك الأول في رحلتك الدراسية. نوفر لك كل ما تحتاجه من كتب، ملخصات، واختبارات لمساعدتك على التفوق وتبسيط المفاهيم العلمية بأسلوب شيق وجذاب.",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "echo \"To run this project, open index.html in your web browser.\"",
+    "dev": "echo \"To run this project, open index.html in your web browser.\"",
+    "build": "echo \"No build step configured.\"",
+    "test": "echo \"No test step configured.\""
   },
   "dependencies": {
-    "react-router-dom": "^7.9.1",
+    "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react": "^19.1.1"
+    "react-router-dom": "^7.9.1"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
   }
 }

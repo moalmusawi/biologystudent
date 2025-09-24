@@ -1,20 +1,12 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# لا حياة بلا أحياء
 
-# Run and deploy your AI Studio app
+موقع متخصص لمادة الأحياء، مصمم ليكون رفيقك الأول في رحلتك الدراسية. نوفر لك كل ما تحتاجه من كتب، ملخصات، واختبارات لمساعدتك على التفوق وتبسيط المفاهيم العلمية بأسلوب شيق وجذاب.
 
-This contains everything you need to run your app locally.
+## How to Run
 
-View your app in AI Studio: https://ai.studio/apps/drive/1x-EdYbERPhUW-wNrWr5FypwTYU6V2mD_
+This project is set up to run directly in the browser. No build step is required.
 
-## Run Locally
+1.  Clone the repository.
+2.  Open the `index.html` file in a modern web browser.
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The application uses import maps to load dependencies from a CDN.

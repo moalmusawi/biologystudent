@@ -1,9 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookIcon } from '../components/IconComponents';
+import { useAppContext } from '../App';
 
 const HomePage: React.FC = () => {
+  const { t } = useAppContext();
+
   return (
     <div className="flex items-center justify-center min-h-[calc(100vh-13rem)] -my-8">
       <div className="text-center">
@@ -15,18 +17,18 @@ const HomePage: React.FC = () => {
         </div>
         
         <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4 animate-fade-in-down">
-          لا حياة <span className="text-emerald-600">بلا أحياء</span>
+          {t('appName.pt1')} <span className="text-emerald-600">{t('appName.pt2')}</span>
         </h1>
         
         <p className="max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed mb-8 animate-fade-in-up">
-           موقع متخصص لمادة الأحياء، مصمم ليكون رفيقك الأول في رحلتك الدراسية. نوفر لك كل ما تحتاجه من كتب، ملخصات، واختبارات لمساعدتك على التفوق وتبسيط المفاهيم العلمية بأسلوب شيق وجذاب.
+          {t('hero.title')}
         </p>
         
         <Link
           to="/textbooks"
           className="inline-block bg-emerald-600 text-white font-bold py-3 px-10 rounded-full hover:bg-emerald-700 transition duration-300 transform hover:scale-105 shadow-lg animate-bounce-in"
         >
-          ابدأ المذاكرة
+          {t('hero.cta')}
         </Link>
       </div>
       

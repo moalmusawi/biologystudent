@@ -1,5 +1,5 @@
 
 export interface NavLink {
-  label: string;
+  key: string;
   path: string;
 }

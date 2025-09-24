@@ -3,29 +3,26 @@ import SectionTitle from '../components/SectionTitle';
 import { useAppContext } from '../App';
 import { BookIcon, ExternalLinkIcon } from '../components/IconComponents';
 
-const TextbooksPage: React.FC = () => {
+const SuccessCriteriaPage: React.FC = () => {
   const { t } = useAppContext();
   
-  const books = [
-    { titleKey: 'textbooks.sb1', link: 'https://ict.moe.gov.om/book/PDF/10/cls10_Bio_SB_P1/index.html' },
-    { titleKey: 'textbooks.ab1', link: 'https://ict.moe.gov.om/book/PDF/10/cls10_Bio_AB_P1/index.html' },
-    { titleKey: 'textbooks.sb2', link: 'https://ict.moe.gov.om/book/PDF/10/cls10_Bio_Talib_P2/index.html' },
-    { titleKey: 'textbooks.ab2', link: 'https://ict.moe.gov.om/book/PDF/10/cls10_Bio_AB_P2/index.html' },
+  const criteria = [
+    { titleKey: 'successCriteria.chapter1', link: 'https://drive.google.com/file/d/1dyP8GvDjdbFqZrdx9wp67P7p19RqDmgm/view?usp=drive_link' },
+    { titleKey: 'successCriteria.chapter2', link: 'https://drive.google.com/file/d/19DY0kpsSLsnGnH1EIV_RRdzmrqpTLBkZ/view?usp=drive_link' },
   ];
 
   return (
     <div>
       <SectionTitle
-        title={t('textbooks.title')}
-        subtitle={t('textbooks.subtitle')}
+        title={t('successCriteria.title')}
+        subtitle={t('successCriteria.subtitle')}
       />
-      <div className="max-w-5xl mx-auto">
-        <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">{t('textbooks.grade10')}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {books.map((book, index) => (
+      <div className="max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 gap-8">
+          {criteria.map((item, index) => (
             <a 
               key={index} 
-              href={book.link} 
+              href={item.link} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="group block bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
@@ -36,10 +33,10 @@ const TextbooksPage: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <h4 className="text-lg font-bold text-gray-800 group-hover:text-emerald-600 transition-colors duration-300">
-                    {t(book.titleKey)}
+                    {t(item.titleKey)}
                   </h4>
                   <p className="mt-1 text-sm text-emerald-600 font-semibold flex items-center">
-                    {t('textbooks.openBook')}
+                    {t('successCriteria.open')}
                     <ExternalLinkIcon className="w-4 h-4 ml-2 rtl:mr-2 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
                   </p>
                 </div>
@@ -52,4 +49,4 @@ const TextbooksPage: React.FC = () => {
   );
 };
 
-export default TextbooksPage;
+export default SuccessCriteriaPage;
