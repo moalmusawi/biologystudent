@@ -1,17 +1,9 @@
 
-
-
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import SectionTitle from './SectionTitle';
 import { useAppContext } from '../App';
-import { QuizResult } from '../types';
-
-interface QuizQuestion {
-  question: string;
-  options: string[];
-  correctAnswer: number;
-}
+import { QuizResult, QuizQuestion } from '../types';
 
 interface QuizProps {
   unitKey: 'unit1' | 'unit2' | 'unit3' | 'unit4' | 'unit5' | 'unit6' | 'unit7';
@@ -95,6 +87,8 @@ const Quiz: React.FC<QuizProps> = ({ unitKey }) => {
         score,
         total: sessionQuestions.length,
         date: new Date().toISOString(),
+        questions: sessionQuestions,
+        selectedAnswers: selectedAnswers,
     };
     const history: QuizResult[] = JSON.parse(localStorage.getItem('quizHistory') || '[]');
     history.unshift(newResult);

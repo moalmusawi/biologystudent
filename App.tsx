@@ -32,6 +32,7 @@ import UnitSixQuizPage from './pages/UnitSixQuizPage';
 import UnitSevenQuizPage from './pages/UnitSevenQuizPage';
 import ReferencePage from './pages/ReferencePage';
 import ProfilePage from './pages/ProfilePage';
+import QuizReviewPage from './pages/QuizReviewPage';
 
 
 // Types
@@ -189,6 +190,7 @@ const App: React.FC = () => {
                     <Route path="/unit-7/quiz" element={<UnitSevenQuizPage />} />
                     <Route path="/references" element={<ReferencePage />} />
                     <Route path="/profile" element={<ProfilePage />} />
+                    <Route path="/quiz-review" element={<QuizReviewPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                 </Routes>
             </main>
