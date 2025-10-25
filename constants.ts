@@ -15,5 +15,7 @@ export const NAV_LINKS: NavLink[] = [
   { key: 'nav.unit5', path: '/unit-5' },
   { key: 'nav.unit6', path: '/unit-6' },
   { key: 'nav.unit7', path: '/unit-7' },
+  { key: 'nav.references', path: '/references' },
+  { key: 'nav.profile', path: '/profile' },
   { key: 'nav.contact', path: '/contact' },
 ];

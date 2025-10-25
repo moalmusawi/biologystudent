@@ -10,8 +10,8 @@ const AboutProjectPage: React.FC = () => {
         title={t('about.title')}
         subtitle={t('about.subtitle')}
       />
-      <div className="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
-        <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+      <div className="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto dark:bg-slate-800">
+        <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line dark:text-slate-300">
             {t('about.content')}
         </p>
       </div>
