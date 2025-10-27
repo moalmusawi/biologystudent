@@ -1,22 +1,10 @@
 import React from 'react';
-import SectionTitle from '../components/SectionTitle';
-import { useAppContext } from '../App';
+
+// This page component is currently unused in the application.
+// Its content has been removed as part of project cleanup.
 
 const SummariesPage: React.FC = () => {
-  const { t } = useAppContext();
-  return (
-    <div className="text-center">
-      <SectionTitle
-        title={t('summaries.title')}
-        subtitle={t('summaries.subtitle')}
-      />
-      <div className="bg-white p-12 rounded-lg shadow-md max-w-3xl mx-auto">
-        <p className="text-xl text-gray-500">
-          {t('placeholder.content')}
-        </p>
-      </div>
-    </div>
-  );
+  return null;
 };
 
 export default SummariesPage;

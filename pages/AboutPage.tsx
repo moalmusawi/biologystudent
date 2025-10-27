@@ -1,7 +1,8 @@
+
 import React from 'react';
 import SectionTitle from '../components/SectionTitle';
 import { useAppContext } from '../App';
-import { BookIcon, ExternalLinkIcon } from '../components/IconComponents';
+import ExternalResourceLink from '../components/ExternalResourceLink';
 
 const TextbooksPage: React.FC = () => {
   const { t } = useAppContext();
@@ -23,28 +24,12 @@ const TextbooksPage: React.FC = () => {
         <h3 className="text-2xl font-bold text-gray-800 dark:text-slate-100 mb-8 text-center">{t('textbooks.grade10')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {books.map((book, index) => (
-            <a 
-              key={index} 
-              href={book.link} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="group block bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 dark:bg-slate-800 dark:hover:shadow-lg dark:hover:shadow-emerald-700/20"
-            >
-              <div className="p-6 flex items-center space-x-4 rtl:space-x-reverse">
-                <div className="flex-shrink-0 bg-emerald-100 p-3 rounded-full group-hover:bg-emerald-200 transition-colors duration-300 dark:bg-slate-700 dark:group-hover:bg-slate-600">
-                  <BookIcon className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-lg font-bold text-gray-800 group-hover:text-emerald-600 transition-colors duration-300 dark:text-slate-100 dark:group-hover:text-emerald-400">
-                    {t(book.titleKey)}
-                  </h4>
-                  <p className="mt-1 text-sm text-emerald-600 font-semibold flex items-center dark:text-emerald-400">
-                    {t('textbooks.openBook')}
-                    <ExternalLinkIcon className="w-4 h-4 ml-2 rtl:mr-2 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
-                  </p>
-                </div>
-              </div>
-            </a>
+            <ExternalResourceLink
+              key={index}
+              link={book.link}
+              titleKey={book.titleKey}
+              openTextKey="textbooks.openBook"
+            />
           ))}
         </div>
       </div>

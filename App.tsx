@@ -76,7 +76,7 @@ const App: React.FC = () => {
   const [profileName, setProfileNameState] = useState<string>(() => localStorage.getItem('profileName') || '');
   const [fontSize, setFontSize] = useState<number>(() => {
     const storedSize = localStorage.getItem('fontSize');
-    return storedSize ? parseFloat(storedSize) : 16;
+    return storedSize ? parseFloat(storedSize) : 15;
   });
   const [highContrast, setHighContrast] = useState<boolean>(() => localStorage.getItem('highContrast') === 'true');
 
