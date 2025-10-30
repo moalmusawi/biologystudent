@@ -8,6 +8,7 @@ import BackToTopButton from './components/BackToTopButton';
 import { FavoritesProvider } from './components/FavoritesContext';
 import Search from './components/Search';
 import { QuizResult } from './types';
+import Footer from './components/Footer';
 
 // Page Imports
 import TextbooksPage from './pages/AboutPage';
@@ -194,6 +195,7 @@ const App: React.FC = () => {
                     <Route path="/contact" element={<ContactPage />} />
                 </Routes>
             </main>
+            <Footer />
             <BackToTopButton />
         </div>
         </HashRouter>
