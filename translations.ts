@@ -31,7 +31,7 @@ export const translations = {
     // Header
     'header.welcome': 'مرحباً، {name}',
     'header.setupProfile': 'إعداد الملف الشخصي',
-
+    
     // Contact Page
     'contact.title': 'اتصل بنا',
     'contact.subtitle': 'يسعدنا تواصلكم معنا! سواء كان لديكم سؤال، اقتراح، أو رغبة في الانضمام.',
@@ -182,12 +182,18 @@ export const translations = {
     'profile.data.confirm.no': 'إلغاء',
     'profile.quizHistory.review': 'مراجعة',
     'profile.data.undo': 'تراجع',
-
+    
     // Quiz Review Page
     'quizReview.title': 'مراجعة الاختبار',
     'quizReview.backToProfile': 'العودة إلى الملف الشخصي',
     'quizReview.score': 'النتيجة',
     'quizReview.date': 'تاريخ الاختبار',
+
+    // AI Study Buddy
+    'aiBuddy.title': 'مساعد الأحياء الذكي',
+    'aiBuddy.welcomeMessage': 'مرحباً! أنا مساعدك الذكي في مادة الأحياء. اسألني أي سؤال عن المنهج وسأبذل قصارى جهدي للإجابة.',
+    'aiBuddy.inputPlaceholder': 'اكتب سؤالك هنا...',
+    'aiBuddy.errorMessage': 'عذراً، حدث خطأ ما. يرجى المحاولة مرة أخرى.',
 
     // Quiz Generic
     'quiz.backToUnit': 'العودة إلى الوحدة',
@@ -626,12 +632,18 @@ export const translations = {
     'profile.data.confirm.no': 'Cancel',
     'profile.quizHistory.review': 'Review',
     'profile.data.undo': 'Undo',
-
+    
     // Quiz Review Page
     'quizReview.title': 'Quiz Review',
     'quizReview.backToProfile': 'Back to Profile',
     'quizReview.score': 'Score',
     'quizReview.date': 'Quiz Date',
+
+    // AI Study Buddy
+    'aiBuddy.title': 'AI Biology Assistant',
+    'aiBuddy.welcomeMessage': 'Hello! I am your smart biology assistant. Ask me any question about the curriculum, and I will do my best to answer.',
+    'aiBuddy.inputPlaceholder': 'Type your question here...',
+    'aiBuddy.errorMessage': 'Sorry, something went wrong. Please try again.',
 
     // Quiz Generic
     'quiz.backToUnit': 'Back to Unit',

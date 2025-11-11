@@ -1,5 +1,5 @@
 
-import React, { createContext, useState, useEffect, useContext, useCallback } from 'react';
+import React, { createContext, useState, useEffect, useContext, useCallback, useMemo } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
@@ -9,6 +9,7 @@ import { FavoritesProvider } from './components/FavoritesContext';
 import Search from './components/Search';
 import { QuizResult } from './types';
 import Footer from './components/Footer';
+import AiStudyBuddy from './components/AiStudyBuddy';
 
 // Page Imports
 import TextbooksPage from './pages/AboutPage';
@@ -80,6 +81,7 @@ const App: React.FC = () => {
     return storedSize ? parseFloat(storedSize) : 15;
   });
   const [highContrast, setHighContrast] = useState<boolean>(() => localStorage.getItem('highContrast') === 'true');
+  const [isAiBuddyOpen, setIsAiBuddyOpen] = useState(false);
 
   // Language effect
   useEffect(() => {
@@ -143,7 +145,7 @@ const App: React.FC = () => {
     return translation;
   }, [language]);
   
-  const contextValue = {
+  const contextValue = useMemo(() => ({
     language,
     setLanguage,
     theme,
@@ -155,7 +157,7 @@ const App: React.FC = () => {
     setFontSize,
     highContrast,
     setHighContrast,
-  };
+  }), [language, theme, t, profileName, fontSize, highContrast]);
 
   const handleOpenSearch = () => setIsSearchOpen(true);
   const handleCloseSearch = () => setIsSearchOpen(false);
@@ -165,7 +167,7 @@ const App: React.FC = () => {
       <FavoritesProvider>
         <HashRouter>
           <div className="flex flex-col min-h-screen">
-            <Header onSearchClick={handleOpenSearch} />
+            <Header onSearchClick={handleOpenSearch} onAiBuddyClick={() => setIsAiBuddyOpen(true)} />
             {isSearchOpen && <Search onClose={handleCloseSearch} />}
             <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <Routes>
@@ -197,6 +199,7 @@ const App: React.FC = () => {
             </main>
             <Footer />
             <BackToTopButton />
+            {isAiBuddyOpen && <AiStudyBuddy isOpen={isAiBuddyOpen} onClose={() => setIsAiBuddyOpen(false)} />}
         </div>
         </HashRouter>
       </FavoritesProvider>

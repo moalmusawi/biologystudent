@@ -2,14 +2,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
-import { BookIcon, MenuIcon, CloseIcon, SearchIcon, SunIcon, MoonIcon, EllipsisVerticalIcon, LanguageIcon, UserCircleIcon, PlusIcon, MinusIcon, ContrastIcon } from './IconComponents';
+import { BookIcon, MenuIcon, CloseIcon, SearchIcon, SunIcon, MoonIcon, EllipsisVerticalIcon, LanguageIcon, UserCircleIcon, PlusIcon, MinusIcon, ContrastIcon, ChatBotIcon } from './IconComponents';
 import { useAppContext } from '../App';
 
 interface HeaderProps {
   onSearchClick: () => void;
+  onAiBuddyClick: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onSearchClick }) => {
+const Header: React.FC<HeaderProps> = ({ onSearchClick, onAiBuddyClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isToolsMenuOpen, setIsToolsMenuOpen] = useState(false);
   const toolsMenuRef = useRef<HTMLDivElement>(null);
@@ -44,10 +45,10 @@ const Header: React.FC<HeaderProps> = ({ onSearchClick }) => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
-  const handleSearchClick = () => {
-    onSearchClick();
+  const handleToolClick = (action: () => void) => {
+    action();
     setIsToolsMenuOpen(false);
-  };
+  }
 
   const increaseFontSize = () => setFontSize(prev => Math.min(prev + FONT_STEP, MAX_FONT_SIZE));
   const decreaseFontSize = () => setFontSize(prev => Math.max(prev - FONT_STEP, MIN_FONT_SIZE));
@@ -113,12 +114,20 @@ const Header: React.FC<HeaderProps> = ({ onSearchClick }) => {
                      aria-labelledby="tools-menu-button"
                    >
                      <button
-                        onClick={handleSearchClick}
+                        onClick={() => handleToolClick(onSearchClick)}
                         className="w-full text-start flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
                         role="menuitem"
                       >
                        <SearchIcon className="h-5 w-5" />
                        <span>{t('search.title')}</span>
+                     </button>
+                      <button
+                        onClick={() => handleToolClick(onAiBuddyClick)}
+                        className="w-full text-start flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
+                        role="menuitem"
+                      >
+                       <ChatBotIcon className="h-5 w-5" />
+                       <span>{t('aiBuddy.title')}</span>
                      </button>
                      <div className="my-1 h-px bg-gray-200 dark:bg-gray-700"></div>
                      <button

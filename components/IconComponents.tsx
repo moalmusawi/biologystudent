@@ -164,3 +164,21 @@ export const ContrastIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => 
     <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12 3.75a8.25 8.25 0 100 16.5 8.25 8.25 0 000-16.5zM12 5.25V18.75a6.75 6.75 0 000-13.5z" clipRule="evenodd" />
   </svg>
 );
+
+export const ChatBotIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.17 48.17 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+  </svg>
+);
+
+export const PaperAirplaneIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+  </svg>
+);
+
+export const UsersIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962c.57-1.002 1.631-1.631 2.923-1.631h3.356c1.291 0 2.353.629 2.923 1.631M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 19.5a3 3 0 013-3h1.576c.53 0 1.039.224 1.412.61F11.71 17.524a9.095 9.095 0 01-6.21-1.082 3 3 0 01-1.5-2.456c-.097-.506-.153-1.028-.153-1.564 0-3.321 2.689-6 6-6s6 2.679 6 6c0 .536-.056 1.058-.153 1.564a3 3 0 01-1.5 2.456 9.095 9.095 0 01-6.21 1.082z" />
+  </svg>
+);

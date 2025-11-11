@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
@@ -11,7 +12,7 @@ const ProfilePage: React.FC = () => {
   const [isSaved, setIsSaved] = useState(false);
   const [isNameCleared, setIsNameCleared] = useState(false);
   const [showConfirmClearHistory, setShowConfirmClearHistory] = useState(false);
-
+  
   // State for undo functionality (quiz history only)
   const [isHistoryCleared, setIsHistoryCleared] = useState(false);
   const historyBackupRef = useRef<QuizResult[]>([]);
